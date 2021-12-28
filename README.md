@@ -24,6 +24,11 @@ Linear searching nearby roads gives us N queries and N time per query. Overall t
 The same algorithm is applied on every road.
 Given the query road (blue), we search for all roads in the alternate database near its endpoints.
 All roads on a path connecting these 2 endpoints, while still maintaining a near distance is considered a match. 
+
+![Visualization of road sections in Database 1](ex2_endpoints.png)
+
+![Visualization of road sections in Database 1](ex2_matches.png)
+
 ### Statistical Visualization
 
 
