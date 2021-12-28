@@ -25,7 +25,7 @@ The same algorithm is applied on every road.
 Given the query road (blue), we search for all roads in the alternate database near its endpoints.
 All roads on a path connecting these 2 endpoints, while still maintaining a near distance is considered a match. 
 
-![Visualization of road algorithm matching process Step 1](images/ex2_endpoints.png)
+![Visualization of road algorithm matching process Step 1](images/ex2_endpoints_blue.png)
 
 ![Visualization of road algorithm matching process Step 2](images/ex2_matches.png)
 
