@@ -9,7 +9,7 @@ My supervisor at the University of Toronto Transportation Research Institute had
 ## Data
 Data is given as 2 csv files, were each describes an individual road section.
 
-![Visualization of road sections in Database 1](images/ex1_HERE.png) ![Visualization of road sections in Database 2](images/ex1_aimsun.png) ![Visualization of road sections in Database 2](images/ex1_match.png) 
+![Visualization of road sections in Database 1](images/ex1_HERE.png) ![Visualization of road sections in Database 2](images/ex1_aimsun.png) ![Visualization of road sections in Database 2](images/ex1_match_background.png) 
 ## Solution Architecture
 My program consists of the following steps. 
 1. Road information is transferred into a new datastructure to allow fast queries based on geographic location.
