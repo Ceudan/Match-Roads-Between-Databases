@@ -10,13 +10,16 @@ My supervisor at the University of Toronto Transportation Research Institute had
 Data is given as 2 csv files, were each describes an individual road section.
 
 ![Visualization of road sections in Database 1](images/ex1_HERE.png) ![Visualization of road sections in Database 2](images/ex1_aimsun.png) ![Visualization of road sections in Database 2](images/ex1_match_background.png) 
-## Solution Architecture
+## Architecture
 My program consists of the following steps. 
 1. Road information is transferred into a new datastructure to allow fast queries based on geographic location.
 2. Algorithm matches roads between databases.
 3. Statistics and visualizations regarding integrity of matching process is generated.
 ### Data Reorganization
 Linear searching nearby roads gives us N queries and N time per query. Overall this is O(n^2), which is greater than 10^9 and is computationally infeasable. To permit fast queries I restructured our data based on geographic coordinates. I utilized a stack of ordered lists. Locating the appropriate list takes O(1) time, binary searching on that takes O(logN) time. Overall complexity is very roughly O(log(N/L)) time, where L is the number of levels. 
+
+![Visualization of road sections in Database 1](images/data_reorganization.png)
+
 ### Algorithm
 The same algorithm is applied on every road.
 Given the query road (blue), we search for all roads in the alternate database near its endpoints.
