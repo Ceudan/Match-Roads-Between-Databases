@@ -37,5 +37,6 @@ Finally, the overlapping distance and direction of each matched section in relat
 ![Visualization of road sections in Database 1](images/overlap_calcs.png)
 
 ## Results
-
+Accuracy: Accuracy per test query is 85%. Accuracy jumps to 94% when excluding freeways and sections shorter than 10 metres.
+Time: 
 
