@@ -42,5 +42,5 @@ Time: 12 minutes to double match dataframes of sizes 160,000 and 300,000.
 ## Improvements
 Data Organization: Instead of creating my own datastructure to allow for fast coordinate based search queries, I would use a library that organizes data according to 2 dimensions for me. This will make my code simpler and more reproducable.
 
-### Skills Learned 
+## Skills Learned 
 GeoPandas, GIS, shapefiles, shapely visualizations, matrix/array operation time dependancies
