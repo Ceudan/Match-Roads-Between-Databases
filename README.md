@@ -34,7 +34,7 @@ Step 2: Remove sections that do not directly connect the endpoints (approximated
 ### Statistical Visualization
 Finally, the overlapping distance and direction of each matched section in relation to the query road is generated using simple geometry heurisitcs. Visualizations are also produced to test the integrity of the program.
 
-![Visualization of road sections in Database 1](images/overlap_calc.png)
+![Visualization of road sections in Database 1](images/overlap_calcs.png)
 
 ## Results
 
