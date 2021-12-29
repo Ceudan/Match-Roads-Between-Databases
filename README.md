@@ -20,12 +20,15 @@ In the original Pandas dataframe, searching for a road section based on coordina
 
 ![Visualization of road sections in Database 1](images/data_reorganization.png)
 
-### Algorithm
-The same algorithm is applied on every road.
-Given the query road (blue), we search for all roads in the alternate database near its endpoints.
-All roads on a path connecting these 2 endpoints, while still maintaining a near distance is considered a match. 
+### Matching Algorithm
+Every query road undergoes the following algorithm.
+
+/
+Step 1: We find all the sections near the query road's enpoints. We know have 2 sets of sections, 1 for each endpoint.
 
 ![Visualization of road algorithm matching process Step 1](images/ex2_endpoints_blue.png)
+
+Step 2: Only keep the sections lying directly on a path connecting these 2 sets.
 
 ![Visualization of road algorithm matching process Step 2](images/ex2_matches.png)
 
