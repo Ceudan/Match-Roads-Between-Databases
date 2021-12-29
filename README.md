@@ -32,10 +32,6 @@ Step 2: Remove sections that do not directly connect the endpoints (approximated
 ![Visualization of road algorithm matching process Step 2](images/ex2_matches.png)
 
 ### Statistical Visualization
-
-
-
-Solution: I independantly designed an algorithm to match roads based on geographic and connected node information. It filtered out sections that overlapped but were not part of the same roadway, as well as sections that were part of the same roadway but ran opposite directions. I made the program generalizable so it could be reapplied to different data sources. Final time to doubly match both databases was 8 minutes.
-
+Finally, the overlapping distance and direction of each matched section in relation to the query road is generated using simple geometry heurisitcs. Visualizations are also produced to test the integrity of the program.
 
 ![Visualization of road sections in Database 1](images/overlap_calc.png)
