@@ -5,7 +5,7 @@ My supervisor at the University of Toronto Transportation Research Institute had
 - over 100,000 road sections per database (strong time complexity requirements)
 - close proximity does not gaurentee correct match
 - geographic coordinates carried up to 10 metres of uncertainty
-- 
+
 ## Data
 Data is given as 2 GeoPandas dataframes, with each row describing a section. Sizes are 160,000 and 300,000 rows.
 
@@ -30,13 +30,18 @@ Step 1: Find sections near the endpoints of the query road, and store them in 2 
 Step 2: Remove sections that do not directly connect the endpoints (approximated by the 2 sets). Remaining sections are the final matches.
 
 ![Visualization of road algorithm matching process Step 2](images/ex2_matches.png)
-
 ### Statistical Visualization
 Finally, the overlapping distance and direction of each matched section in relation to the query road is generated using simple geometry heuristics. Visualizations are produced to test program integrity.
 
 ![Visualization of road sections in Database 1](images/overlap_calcs.png)
-
 ## Results
 Accuracy: 85%. Accuracy jumps to 94% when excluding freeways and sections shorter than 10 metres.
+
 Time: 12 minutes to double match dataframes of sizes 160,000 and 300,000.
 
+## Improvements
+Data Organization: Instead of creating my own datastructure to allow for fast coordinate based search queries, I would use a library that organizes data according to 2 dimensions for me. This will make my code simpler and more reproducable.
+
+\
+\
+Skills Learned: GeoPandas, GIS, shapefiles, shapely visualizations, matrix/array operation time dependancies
