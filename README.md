@@ -27,7 +27,7 @@ Step 1: Find sections near the endpoints of the query road, and store them in 2 
 
 ![Visualization of road algorithm matching process Step 1](images/ex2_endpoints_blue.png)
 
-Step 2: Remove sections that do not directly connect the endpoints (approximated by the 2 sets).
+Step 2: Remove sections that do not directly connect the endpoints (approximated by the 2 sets). Remaining sections are our final matches.
 
 ![Visualization of road algorithm matching process Step 2](images/ex2_matches.png)
 
