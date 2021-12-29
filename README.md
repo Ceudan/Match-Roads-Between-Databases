@@ -35,7 +35,7 @@ Finally, the overlapping distance and direction of each matched section in relat
 
 ![Visualization of road sections in Database 1](images/overlap_calcs.png)
 ## Results and Discussion
-Accuracy: 85%. Accuracy jumps to 94% when excluding freeways and sections shorter than 10 metres.
+Accuracy: 85%. Accuracy jumps to 94% when excluding freeways and sections shorter than 10 metres. Note that accuracy is highly dynamic as overlap information can be used as second adjustable threshold to improve results.
 
 Time: 12 minutes to double match dataframes of sizes 160,000 and 300,000.
 
