@@ -7,7 +7,7 @@ My supervisor at the University of Toronto Transportation Research Institute had
 - geographic coordinates carried up to 10 metres of uncertainty
 - 
 ## Data
-Data is given as 2 csv files, with each row containing a road section's shapefile and attributes.
+Data is given as 2 csv files, with each row containing a section's shapefile and attributes.
 
 ![Visualization of road sections in Database 1](images/ex1_HERE.png) ![Visualization of road sections in Database 2](images/ex1_aimsun.png) ![Visualization of query road and returned matches](images/ex1_match_background.png) 
 ## Architecture
