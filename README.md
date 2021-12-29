@@ -21,7 +21,7 @@ In the original Pandas dataframe, searching for a road section based on coordina
 ![Visualization of road sections in Database 1](images/data_reorganization.png)
 
 ### Matching Algorithm
-For every query road in dataframe 1, we will find matching roads in dataframe 2. Unfortunately there are many sections that are near or overlap, but do not belong to the same road. Therefore we need a better algorithm than a simple distance heuristic. The solution consists of the following:
+For every query road in dataframe 1, we will find matching roads in dataframe 2. Unfortunately there are many sections that are close or overlap, but do not belong to the same road. Therefore we need a better algorithm than a simple distance heuristic. The solution consists of the following:
 
 Step 1: Create 2 sets of sections, describing roads near each endpoint of the query road.
 
