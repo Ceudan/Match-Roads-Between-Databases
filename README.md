@@ -7,7 +7,7 @@ My supervisor at the University of Toronto Transportation Research Institute had
 - geographic coordinates carried up to 10 metres of uncertainty
 - 
 ## Data
-Data is given as 2 GeoPandas dataframes, with each row describing a section.
+Data is given as 2 GeoPandas dataframes, with each row describing a section. Sizes are 160,000 and 300,000 rows.
 
 ![Visualization of road sections in Database 1](images/ex1_HERE.png) ![Visualization of road sections in Database 2](images/ex1_aimsun.png) ![Visualization of query road and returned matches](images/ex1_match_background.png) 
 ## Architecture
@@ -37,6 +37,6 @@ Finally, the overlapping distance and direction of each matched section in relat
 ![Visualization of road sections in Database 1](images/overlap_calcs.png)
 
 ## Results
-Accuracy: Accuracy per test query is 85%. Accuracy jumps to 94% when excluding freeways and sections shorter than 10 metres.
-Time: 
+Accuracy: 85%. Accuracy jumps to 94% when excluding freeways and sections shorter than 10 metres.
+Time: 12 minutes to double match dataframes of sizes 160,000 and 300,000.
 
