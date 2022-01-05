@@ -31,7 +31,7 @@ Step 1: Find sections near each endpoint of the query road, and store them in 2 
 
 ![Visualization of road algorithm matching process Step 1](images/ex2_endpoints_blue.png)
 
-Step 2: We run a search algorithm to find a path connecting the 2 sets. If a path is found, and all sections along the path also lie close to the query road, then this path must be the query road itself and the matches are found.
+Step 2: We run a search algorithm to find a path connecting the 2 sets. If a path is found, and all sections along the path also lie close to the query road, then this path should be the query road itself.
 
 ![Visualization of road algorithm matching process Step 2](images/ex2_matches.png)
 ### Statistical Visualization
