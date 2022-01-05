@@ -48,6 +48,7 @@ Instead of creating my own datastructure to allow for fast coordinate based sear
 
 #### Matching Algorithm
 I would explore utilising some information (ex. overlap distance, road names, road direction) as a second threshold to improve accuracy. After application on the 5% of failed cases, I expect accuracy to be very high.
-
-### Skills Learned 
-GeoPandas, GIS, shapefiles, shapely visualizations, matrix/array operation time dependancies
+\
+\
+\
+Skills Learned: GeoPandas, GIS, shapefiles, shapely visualizations, matrix/array operation time dependancies
