@@ -3,7 +3,6 @@ I independantly wrote a program to match roads sections from different traffic d
 ## Background
 My supervisor at the University of Toronto Transportation Research Institute was involved in the calibration of a traffic simulation model covering the GTHA to real world conditions. This means modifying simulation parameters until conditions and traffic flows match those given by third party sources. Given observed data from HERE techologies, my supervisor wanted to know which sections in the simulation model were being described.
 ## Problem
-Because naming is inconsistent Hurdles include the following:
 - over 100,000 road sections per database (strong time complexity requirements)
 - naming is inconsistent
 - location of road section splits are inconsistent between databases
@@ -11,7 +10,7 @@ Because naming is inconsistent Hurdles include the following:
 - geographic coordinates carried up to 10 metres of uncertainty
 
 ## Data
-Data is given as 2 GeoPandas dataframes, with each row describing a section. Information includes name of each road, connected sections, and geometric characteristics given as shapely objects. In total there are 160,000 and 300,000 sections per database.
+Data is given as 2 GeoPandas dataframes, with each row describing a section. Information includes road name, connected sections, and geometric characteristics given as shapely objects. In total there are 160,000 and 300,000 sections per database.
 
 ![Visualization of road sections in Database 1](images/ex1_HERE.png) ![Visualization of road sections in Database 2](images/ex1_aimsun.png) ![Visualization of query road and returned matches](images/ex1_match_background.png) 
 ## Architecture
