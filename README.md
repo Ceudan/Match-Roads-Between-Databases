@@ -25,13 +25,13 @@ In the original Pandas dataframe, searching for a road section based on coordina
 ![Visualization of road sections in Database 1](images/data_reorganization.png)
 
 ### Matching Algorithm
-The matching algorithm works primarily with geo-spatial information. Unfortunately seperate roads commonly overlap or are close. Therefore we need a better algorithm than a simple distance heuristic. The solution consists of the following:
+The matching algorithm works primarily with geo-spatial information. Because separate roads commonly overlap or are close, we need a better algorithm than a simple distance heuristic. My solution combines a distance heuristic, with connected section information to filter out most incorrect matches.
 
-Step 1: Find sections near the endpoints of the query road, and store them in 2 sets.
+Step 1: Find sections near each endpoint of the query road, and store them in 2 sets.
 
 ![Visualization of road algorithm matching process Step 1](images/ex2_endpoints_blue.png)
 
-Step 2: Remove sections that do not directly connect the endpoints (approximated by the 2 sets). Remaining sections are the final matches.
+Step 2: We run a search algorithm to find a path connecting the 2 sets. If a path is found, and all sections along the path also lie close to the query road, then this path must be the query road itself and the matches are found.
 
 ![Visualization of road algorithm matching process Step 2](images/ex2_matches.png)
 ### Statistical Visualization
@@ -39,7 +39,7 @@ Finally, the overlapping distance and direction of each matched section in relat
 
 ![Visualization of road sections in Database 1](images/overlap_calcs.png)
 ## Results and Discussion
-Accuracy: 85% per query. Accuracy jumps to 94% when excluding freeways and sections shorter than 10 metres. Note that accuracy is highly dynamic as overlap information can be used as a second adjustable threshold to improve results.
+Accuracy: 94% per query when excluding freeways and sections shorter than 10 metres. 85% otherwise. Accuracy is measured as having all matches of the query road being correct. Note that accuracy is highly dynamic as overlap information and other paramters can be used as an adjustable threshold to improve results.
 
 Time: 12 minutes to double match dataframes of sizes 160,000 and 300,000.
 
