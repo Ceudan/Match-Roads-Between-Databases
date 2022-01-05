@@ -1,27 +1,31 @@
 # Match Roads Between Databases
 I independantly wrote a program to match roads sections from different traffic databases using geographic information.
+## Background
+My supervisor at the University of Toronto Transportation Research Institute was involved in the calibration of a traffic simulation model covering the GTHA to real world conditions. This means modifying simulation parameters until conditions and traffic flows match those given by third party sources. Given observed data from HERE techologies, my supervisor wanted to know which sections in the simulation model were being described.
 ## Problem
-My supervisor at the University of Toronto Transportation Research Institute had 2 datasources describing the region. One was a traffic simulation model covering the GTHA, the other was traffic flow information from HERE maps. My task was to match road sectinos between each database. Hurdles include the following:
+Because naming is inconsistent Hurdles include the following:
 - over 100,000 road sections per database (strong time complexity requirements)
+- naming is inconsistent
+- location of road section splits are inconsistent between databases
 - close proximity does not gaurentee correct match
 - geographic coordinates carried up to 10 metres of uncertainty
 
 ## Data
-Data is given as 2 GeoPandas dataframes, with each row describing a section. Sizes are 160,000 and 300,000 rows.
+Data is given as 2 GeoPandas dataframes, with each row describing a section. Information includes name of each road, connected sections, and geometric characteristics given as shapely objects. In total there are 160,000 and 300,000 sections per database.
 
 ![Visualization of road sections in Database 1](images/ex1_HERE.png) ![Visualization of road sections in Database 2](images/ex1_aimsun.png) ![Visualization of query road and returned matches](images/ex1_match_background.png) 
 ## Architecture
 My program consists of the following stages. 
-1. Data reorganization with a new data structure that allows fast queries based on geographic location.
+1. Data is reorganized into a new data structure that allows fast queries based on geographic location.
 2. Algorithm matches roads between databases.
-3. Visualizations and statistics regarding matching process integrity is generated.
+3. Visualizations and statistics regarding matching process integrity are generated.
 ### Data Reorganization
 In the original Pandas dataframe, searching for a road section based on coordinates is O(N) time. With N queries this gives us O(N^2) time, or roughly 10^9 steps. I restructured key data into a stack of ordered lists, which allows for binary search (figure below). Each query takes approximately O(log(N/nl)) time, where nl = number of lists = 8000. This runs in roughly 5*10^6 steps.
 
 ![Visualization of road sections in Database 1](images/data_reorganization.png)
 
 ### Matching Algorithm
-For every query road in dataframe 1, we will find matching roads in dataframe 2. Unfortunately there are many sections that are close or overlap, but do not belong to the same road. Therefore we need a better algorithm than a simple distance heuristic. The solution consists of the following:
+The matching algorithm works primarily with geo-spatial information. Unfortunately seperate roads commonly overlap or are close. Therefore we need a better algorithm than a simple distance heuristic. The solution consists of the following:
 
 Step 1: Find sections near the endpoints of the query road, and store them in 2 sets.
 
