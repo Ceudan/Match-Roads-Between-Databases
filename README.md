@@ -34,7 +34,7 @@ Step 2: We run a search algorithm to find a path connecting the 2 sets. If a pat
 
 ![Visualization of road algorithm matching process Step 2](images/ex2_matches.png)
 ### Statistical Visualization
-Finally, the overlapping distance and direction of each matched section in relation to the query road is generated using simple geometry heuristics. Visualizations are produced to test program integrity.
+Finally, the overlap distance and direction of each matched section to the query road is calculated via geometric manipulations of the shapely objects. Optional visualizations are produced on the matching process and statistics to test program integrity.
 
 ![Visualization of road sections in Database 1](images/overlap_calcs.png)
 ## Results and Discussion
