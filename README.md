@@ -42,9 +42,6 @@ Finally, the overlapping distance and direction of each matched section in relat
 ### Accuracy
 94% per query when excluding freeways and sections shorter than 10 metres. 85% otherwise. Accuracy is measured as having all matches of the query road being correct. Note that accuracy is highly dynamic as overlap information and other paramters can be used as an adjustable threshold to improve results.
 
-### Runtime
-12 minutes to run all functions on dataframes of sizes 160,000 and 300,000.
-
 ### Improvements
 #### Data Organization
 Instead of creating my own datastructure to allow for fast coordinate based search queries, I would explore libraries that organizes data according to 2 dimensions for me. This will make my code simpler and more reproducible.
