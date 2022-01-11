@@ -43,7 +43,7 @@ Finally, the overlap distance and direction of each matched section to the query
 
 ### Improvements
 #### Data Organization
-Instead of creating my own datastructure to allow for faster coordinate based search queries, I would explore libraries that organizes data according to 2 dimensions for me. This will make my code simpler and more reproducible.
+Instead of creating my own datastructure to allow for faster coordinate based search queries, I would explore libraries that organize data according to 2 dimensions for me. This will make my code simpler and more reproducible.
 #### Matching Algorithm
 I would explore utilising secondary information (ex. overlap distance, road names, road direction) as a second threshold to improve accuracy. Since the program would now have 2 distinct filters, accuracy is expected to be very high.
 \
