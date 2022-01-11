@@ -39,7 +39,7 @@ Finally, the overlap distance and direction of each matched section to the query
 ![Visualization of road sections in Database 1](images/overlap_calcs.png)
 ## Results and Discussion
 ### Accuracy
-94% per query when excluding freeways and sections shorter than 10 metres. 85% otherwise. Accuracy is measured as having all matches of the query road being correct. Note that accuracy is highly dynamic as overlap information and other paramters can be used as an adjustable threshold to improve results.
+94% per query when excluding freeways and sections shorter than 10 metres. 85% otherwise. Accuracy is measured as having all matches of the query road being correct. Note that accuracy is highly dynamic as overlap information and other parameters can be used as an adjustable threshold to improve results.
 
 ### Improvements
 #### Data Organization
