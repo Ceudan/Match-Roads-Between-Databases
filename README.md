@@ -7,7 +7,7 @@ My supervisor at the University of Toronto Transportation Research Institute was
 - naming is inconsistent
 - location of road section splits are inconsistent between databases
 - close proximity does not gaurentee correct match
-- geographic coordinates carried up to 10 metres of uncertainty
+- geographic coordinates carry up to 10 metres of uncertainty
 
 ## Data
 Data is given as 2 GeoPandas dataframes, with each row describing a section. Information includes road name, connected sections, and geometric characteristics given as shapely objects. In total there are 160,000 and 300,000 sections per database.
