@@ -6,7 +6,7 @@ My supervisor at the University of Toronto Transportation Research Institute was
 - over 100,000 road sections per database (strong time complexity requirements)
 - naming is inconsistent
 - location of road section splits are inconsistent between databases
-- close proximity does not gaurentee correct match
+- close proximity does not gaurantee correct match
 - geographic coordinates carry up to 10 metres of uncertainty
 
 ## Data
