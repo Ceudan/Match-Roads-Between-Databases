@@ -21,6 +21,8 @@ My program consists of the following stages.
 ### Data Reorganization
 In the original Pandas dataframe, searching for a road section near coordinates is O(N) time. With N=100,000 queries this gives us O(N^2) time, or roughly 10^10 steps. I restructured key data into a stack of ordered lists, which allows for binary search (figure below). Each query takes approximately O(log(N/nl)) time, where nl = number of lists = 8000. N=100,000 queries runs in roughly 5*10^5 steps.
 
+Searching for multiple roads near a location proceeds as follows. First we identify the relevant latitude lists, which never exceeds 3 given the user's desired matching distance. Next we binary search the longitudinal enpoints on each list to cut out the appropriate range. In reality, we are searching a square centered on the coordinates, with the boundaries of the square being determined in no more than 6 binary searches.
+
 ![Visualization of road sections in Database 1](images/data_reorganization.png)
 
 ### Matching Algorithm
