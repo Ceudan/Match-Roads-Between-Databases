@@ -19,7 +19,7 @@ My program consists of the following stages.
 2. Algorithm matches roads between databases.
 3. Visualizations and statistics regarding matching process integrity are generated.
 ### Data Reorganization
-In the original Pandas dataframe, searching for a road section near coordinates is O(N) time. With N queries this gives us O(N^2) time, or roughly 10^10 steps. I restructured key data into a stack of ordered lists, which allows for binary search (figure below). Each query takes approximately O(log(N/nl)) time, where nl = number of lists = 8000. N queries run in roughly 5*10^6 steps.
+In the original Pandas dataframe, searching for a road section near coordinates is O(N) time. With N=100,000 queries this gives us O(N^2) time, or roughly 10^10 steps. I restructured key data into a stack of ordered lists, which allows for binary search (figure below). Each query takes approximately O(log(N/nl)) time, where nl = number of lists = 8000. N=100,000 queries runs in roughly 5*10^6 steps.
 
 ![Visualization of road sections in Database 1](images/data_reorganization.png)
 
